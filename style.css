@@ -195,42 +195,52 @@ body{
 }
 
 /* Certification */
-.certification-card {
-  width: 100%;
-  display: flex;
-  align-items: center;
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  padding: 20px;
+}
+
+.cert-card {
   background: #161b22;
   border: 1px solid #30363d;
-  border-radius: 8px;
-  color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
   cursor: pointer;
-  transition: transform 0.2s, background-color 0.2s;
+  transition: all 0.3s ease;
   text-align: left;
-  font-family: inherit;
+  width: 100%;
 }
 
-.certification-card:hover {
-  background: #1c2128;
-  transform: translateY(-2px);
+.cert-card:hover {
   border-color: #4ea8ff;
+  background: #1c2128;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.certification-card i {
+.cert-icon {
   font-size: 2rem;
   color: #4ea8ff;
+  background: rgba(78, 168, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.certification-card h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
+.cert-info h3 {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 4px;
 }
 
-.certification-card p {
-  margin: 5px 0 0;
-  font-size: 0.9rem;
+.cert-info p {
+  font-size: 0.85rem;
   color: #8b949e;
 }
 
@@ -294,9 +304,13 @@ body{
   border-color: #4ea8ff;
 }
 
-.social-links{
-  display:flex;
-  gap:25px;
+.social-links {
+  display: flex;
+  gap: 25px;
+  justify-content: center; /* Centers the icons horizontally */
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap; /* Ensures they stack on very small screens */
 }
 
 .social-links a{
